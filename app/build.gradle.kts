@@ -1,11 +1,13 @@
 plugins {
-    id("com.android.application") version "8.7.3"
-    id("org.jetbrains.kotlin.android") version "2.0.21"
-    id("org.jetbrains.kotlin.plugin.compose") version "2.0.21"
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
+    id("org.jetbrains.kotlin.plugin.compose")
 }
+
 android {
     namespace = "com.example.nsebreakout"
     compileSdk = 35
+
     defaultConfig {
         applicationId = "com.example.nsebreakout"
         minSdk = 26
@@ -13,8 +15,12 @@ android {
         versionCode = 1
         versionName = "0.1.0"
     }
-    buildFeatures { compose = true }
+
+    buildFeatures {
+        compose = true
+    }
 }
+
 dependencies {
     implementation("androidx.core:core-ktx:1.15.0")
     implementation("androidx.activity:activity-compose:1.10.0")
